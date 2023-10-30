@@ -30,7 +30,7 @@ jobs:
           command: |
             yarn init -y
             yarn set version 4.0.1
-            echo "nodeLinker: node-modules" | tee .yarnrc.yml
+            echo "nodeLinker: node-modules" | Out-File -FilePath .yarnrc.yml
             yarn add -D supabase
       - run: yarn supabase -h
 workflows:
